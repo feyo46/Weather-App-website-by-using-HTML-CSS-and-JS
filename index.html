@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body style="background-image: url(img/im.jpeg); background-size: cover; background-position: center;">>
+    <div class="video-background">
+        <video autoplay muted loop id="weatherVideo">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-blue-sky-with-clouds-1257-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="weather-container">
+        <div class="current-weather">
+            <div class="weather-card">
+                <div class="weather-header">
+                    <p class="city-name">--</p>
+                    <div class="current-date">
+                        <p class="today-date">--</p>
+                        <p class="current-time">--</p>
+                    </div>
+                </div>
+                
+                <div class="weather-main">
+                    <img class="weather-icon" src="" alt="Weather icon">
+                    <div class="temperature-container">
+                        <p class="current-temperature">--</p>
+                        <p class="cloud-type">--</p>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <form class="locationForm">
+                        <input type="text" name="location" id="location" placeholder="Search location..." required>
+                        <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <button class="location-btn"><i class="fa-solid fa-location-crosshairs"></i></button>
+                    <button class="unit-toggle">°C / °F</button>
+                </div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail">
+                    <i class="fas fa-temperature-high"></i>
+                    <div>
+                        <span>Feels Like</span>
+                        <span class="feels-like">--</span>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-tint"></i>
+                    <div>
+                        <span>Humidity</span>
+                        <span class="humidity">--</span>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-wind"></i>
+                    <div>
+                        <span>Wind</span>
+                        <span class="wind-speed">--</span>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-compress-alt"></i>
+                    <div>
+                        <span>Pressure</span>
+                        <span class="pressure">--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="forecast-container">
+            <h3>5-Day Forecast</h3>
+            <div class="forecast-cards"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
